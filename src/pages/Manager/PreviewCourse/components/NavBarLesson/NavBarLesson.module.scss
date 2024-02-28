@@ -1,0 +1,24 @@
+.navbar {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    padding: 0 8px;
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  a {
+    flex: 1;
+    padding: 8px 0;
+    color: black;
+  }
+
+  &__active {
+    border-left: 3px solid #b36bee;
+    background-color: #f5f7f8;
+  }
+}

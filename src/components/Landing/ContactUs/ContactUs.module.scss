@@ -1,0 +1,43 @@
+.contact__us {
+  background: linear-gradient(90deg, rgba(67,86,255,1) 0%, rgba(161,204,252,1) 100%);
+    width: 100%;
+    padding: 4rem;
+    border-radius: 15px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact__us p {
+    width: 66%;
+  }
+  
+  
+  
+  .contact__btn {
+    background-color: #ffffff;
+    margin: auto;
+    border-radius: 50px;
+    border: 0;
+  }
+
+  .contact__img{
+    z-index: -5;
+  }
+
+
+  .contact__img img {
+    position: absolute;
+    z-index: -5;
+    width: 350px;
+    right: 10%;
+  }
+  @media (max-width: 768px) { 
+    .contact__us p{
+      width: 100%;
+    }
+   }
+
+  
+  
+

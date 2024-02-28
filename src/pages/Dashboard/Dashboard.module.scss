@@ -1,0 +1,128 @@
+@import "../../components/Styles/variables.scss";
+@import "../../components/Styles/responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  font-family: "Inter", sans-serif;
+  color: $main-color;
+}
+
+.container {
+  display: flex;
+}
+
+.menuContainer {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+
+  @include lg {
+    width: max-content;
+  }
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.home {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include sm {
+    grid-auto-rows: minmax(120px, auto);
+  }
+  
+
+  .box {
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+
+    
+  }
+
+  
+
+  .box1 {
+    grid-column: span 1;
+    grid-row: span 3;
+    overflow-y: scroll;
+    max-height: 650px;
+  }
+
+  .box1::-webkit-scrollbar {
+    display: none;
+  }
+
+  // .box1::-webkit-scrollbar-track
+  // {
+  //   padding: 10px;
+  //   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  //   background-color: #F5F5F5;
+  //   border-radius: 10px;
+  // }
+  
+  // .box1::-webkit-scrollbar
+  // {
+  //   padding: 10px;
+  //   width: 10px;
+  //   background-color: #F5F5F5;
+  // }
+  
+  // .box1::-webkit-scrollbar-thumb
+  // {
+  //   padding: 10px;
+  //   border-radius: 10px;
+  //   background-image: -webkit-gradient(linear,
+  //                      left bottom,
+  //                      left top,
+  //                      color-stop(0.44, rgb(122,153,217)),
+  //                      color-stop(0.72, rgb(73,125,189)),
+  //                      color-stop(0.86, rgb(28,58,148)));
+  // }
+  
+  
+
+  .box4 {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  .box7 {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    @include md {
+      display: none;
+    }
+  }
+}

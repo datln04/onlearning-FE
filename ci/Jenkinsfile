@@ -1,0 +1,33 @@
+#!groovy
+
+pipeline {
+    agent {
+        kubernetes {
+            yamlFile "ci/pod_builder.yaml"
+            retries 0
+        }
+    }
+    environment {
+        ECR_REGISTRY="docker.io/distrolessman"
+        IMAGE_NAME="onlearn-fe"
+        TAG="latest"
+        CI=false
+    }
+    stages {
+        stage('Build') {
+            steps {
+                container("builder") {
+                    sh "whoami"
+                    sh "pnpm config set store-dir /root/.pnpm-store"
+                    sh "pnpm install"
+                    sh "pnpm run build"
+                }
+                container("pusher") {
+                    sh """#!/busybox/sh
+                    /kaniko/executor --context `pwd` --dockerfile `pwd`/Dockerfile --destination "${ECR_REGISTRY}/${IMAGE_NAME}:${TAG}" --use-new-run=true
+                    """
+                }
+            }
+        }
+    }
+}

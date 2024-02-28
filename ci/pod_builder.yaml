@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: jenkins-ci
+spec:
+  containers:
+    - name: builder
+      image: docker.io/distrolessman/auto-ci:node-16.20.2-alpine3.17-jdk-17.0.8
+      command:
+        - cat
+      tty: true
+      volumeMounts:
+        - mountPath: /root/.pnpm-store
+          name: npm-global-cache
+    - name: pusher
+      image: gcr.io/kaniko-project/executor:debug
+      command:
+        - cat
+      tty: true
+      volumeMounts:
+        - mountPath: /kaniko/.docker
+          name: jenkins-docker-cfg
+
+  volumes:
+    - name: npm-global-cache
+      hostPath:
+        path: /home/rdteam/.pnpm-store
+    - name: jenkins-docker-cfg
+      projected:
+        sources:
+          - secret:
+              name: docker-credentials
+              items:
+                - key: .dockerconfigjson
+                  path: config.json

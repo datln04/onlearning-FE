@@ -1,0 +1,8 @@
+iframe {
+    max-width: 100%;
+}
+
+.ql-tooltip .ql-editing {
+    left: 0 !important;
+    top: -7px o !important;
+}

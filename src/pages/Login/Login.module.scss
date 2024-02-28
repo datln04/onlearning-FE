@@ -1,0 +1,28 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+
+
+.ipt_custom{
+    --tw-border-opacity: 1;
+    border-color: rgb(212 212 212 / var(--tw-border-opacity));
+    border: 1px;
+    border-radius: 5px;
+}
+
+.btn_custom {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    padding: 0.6rem 1rem;
+    background-color: #4356FF;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+  }
+  
+  .btn_google {
+    color: white ;
+    background-color: #ea4335;
+    border: 0;
+  }
+  
+
+  

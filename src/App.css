@@ -1,0 +1,39 @@
+:root {
+  --primary: #0091ff;
+  --dark: #061b28;
+  --gray: #756388;
+  --light: #ffffff;
+}
+
+.buttonLink {
+  display: inline-block;
+  padding: 10px;
+  /* Adjust the padding to your liking */
+  background-color: #007bff;
+  /* Button background color */
+  color: #fff;
+  /* Text color */
+  text-decoration: none;
+  /* Remove underline */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition on hover */
+
+  /* Additional styles for hover effect */
+  &:hover {
+    background-color: #274d63;
+    color: white
+      /* Change background color on hover */
+  }
+
+}
+
+.swal2-container {
+  z-index: 9999;
+  /* You can set this to a higher value if necessary */
+}

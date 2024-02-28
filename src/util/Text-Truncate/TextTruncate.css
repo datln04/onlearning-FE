@@ -1,0 +1,9 @@
+.text-truncate-custom {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Default to 2 lines, can be overridden by props */
+    -webkit-box-orient: vertical;
+    /* white-space: none !important; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

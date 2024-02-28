@@ -1,0 +1,135 @@
+.header_custom {
+    width: 100%;
+    height: 80px;
+    padding-top: 1%;
+  }
+  
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 1.3rem;
+  }
+  
+  .nav__item a {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #3540aa;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav__item a:hover {
+    color: #4356FF;
+  }
+  
+  .nav__right p {
+    font-weight: 500;
+    color: #3540aa;
+    font-size: 1.1rem;
+  }
+  
+  .nav__btn {
+    background-color: #4356FF !important;
+    color: #ffffff !important;
+  
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  
+  .nav__right p i {
+    font-size: 1.3rem;
+  }
+  
+  .mobile__menu span i {
+    font-size: 1.4rem;
+    color: #3540aa;
+    cursor: pointer;
+  }
+  
+  .mobile__menu {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .nav__menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #252d77;
+      z-index: 99;
+      display: none;
+    }
+  
+    .nav__list {
+      position: absolute;
+      background: #fff;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 999;
+      padding-top: 80px;
+    }
+  
+    .mobile__menu {
+      display: block;
+    }
+  
+    .nav__right {
+      display: none;
+    }
+  
+    .active__menu {
+      display: block;
+    }
+  }
+  
+  /* Initially hide the dropdown */
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Style the dropdown items */
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .dropdown ul li {
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  /* Show the dropdown when the div is clicked */
+  .show__dropdown {
+    display: block;
+  }
+  
+  /* Add hover effect to dropdown items */
+  .dropdown ul li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Change cursor to pointer when hovering over the parent div */
+  .dropdown__container:hover {
+    cursor: pointer;
+  }

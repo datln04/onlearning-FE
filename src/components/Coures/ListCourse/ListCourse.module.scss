@@ -1,0 +1,28 @@
+.buttonLink {
+    display: inline-block;
+    padding: 10px;
+    /* Adjust the padding to your liking */
+    background-color: #007bff;
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition on hover */
+
+    /* Additional styles for hover effect */
+    &:hover {
+        background-color: #274d63;
+        color: white
+            /* Change background color on hover */
+    }
+
+
+}

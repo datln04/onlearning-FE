@@ -1,0 +1,35 @@
+@import "../../Styles/responsive.scss";
+
+.bigChartBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    @include xxl {
+      font-size: 24px;
+    }
+  }
+
+  .chart {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.custom__tooltip {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-weight: bold;
+}
+
+.intro {
+  margin: 5px 0;
+}

@@ -1,0 +1,27 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+
+.intro__content h2 {
+  font-weight: 900;
+  line-height: 50px;
+
+}
+
+.intro__content {
+  padding-top: 20%;
+  text-align: left;
+}
+
+.intro__content p {
+  font-weight: 500;
+}
+
+.intro__button {
+  display: flex;
+  align-items: start;
+  margin-bottom: 5%;
+}
+
+.intro__button .btn__custom {
+  background-color: #4356FF;
+  color: #ffffff;
+}
